@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Dialogs } from '@ionic-native/dialogs/ngx';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -11,7 +12,19 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 })
 export class Tab1Page {
 
-  constructor(private qrScanner: QRScanner, private dialogs: Dialogs) {}
+  public corpoPagina: HTMLElement;
+  public img: HTMLElement;
+
+  public scanner: any;
+
+  constructor(private qrScanner: QRScanner, private dialogs: Dialogs, private platform: Platform) {
+    this.platform.backButton.subscribeWithPriority(0, ()=>{
+      this.platform.style.opacity = '1';
+      this.img.style.opacity = '1';
+
+      this.scanner.hide();
+    })
+  }
 
   public lerQRCode(){
     // Optionally request the permission early
@@ -23,19 +36,22 @@ this.qrScanner.prepare()
      //Exibe camera para leitura
      this.qrScanner.show();
 
-     const corpoPagina = document.getElementsByTagName('body')[0] as HTMLElement;
-     corpoPagina.style.opacity = "0";
+     this.corpoPagina = document.getElementsByTagName('ion-content')[0] as HTMLElement;
+     this.img = document.getElementById('logo') as HTMLElement;
+     this.corpoPagina.style.opacity = "0";
+     this.img.style.opacity = "0";
 
      // start scanning
-     let scanSub = this.qrScanner.scan().subscribe((text: string) => {
+     this.scanner = this.qrScanner.scan().subscribe((text: string) => {
        console.log('Scanned something', text);
 
        this.dialogs.alert('Resultado: ' + text);
 
-       corpoPagina.style.opacity = "1";
+       this.corpoPagina.style.opacity = "1";
+       this.img.style.opacity = "1";
 
        this.qrScanner.hide(); // hide camera preview
-       scanSub.unsubscribe(); // stop scanning
+       this.scanner.unsubscribe(); // stop scanning
      });
 
    } else if (status.denied) {

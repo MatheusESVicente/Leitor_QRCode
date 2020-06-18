@@ -1,13 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color = "dark">
     <ion-title>
-      Tab 1
+      Leitor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color = "medium">
   
-  <ion-button (click) = "lerQRCode" fill="block">Ler QRCode</ion-button>
-
 </ion-content>
+
+<div class="screnn">
+  <div class="scan">
+    <img id="logo" src="assets/logo.png" alt="">
+  </div>
+</div>
+
+
+<ion-footer classname="ion-no-border">
+  <ion-toolbar color ="dark">
+    <ion-button (click) = "lerQRCode" expand="block">Ler QRCode</ion-button>
+  </ion-toolbar>
+</ion-footer>
+
+    
+
+
