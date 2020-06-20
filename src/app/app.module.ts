@@ -13,6 +13,9 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Dialogs } from '@ionic-native/dialogs/ngx';
 
 
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

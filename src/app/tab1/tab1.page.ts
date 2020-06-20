@@ -5,6 +5,7 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Platform } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -17,9 +18,9 @@ export class Tab1Page {
 
   public scanner: any;
 
-  constructor(private qrScanner: QRScanner, private dialogs: Dialogs, private platform: Platform) {
+  constructor(private qrScanner: QRScanner, private dialogs: Dialogs, private platform: Platform,) {
     this.platform.backButton.subscribeWithPriority(0, ()=>{
-      this.platform.style.opacity = '1';
+      this.corpoPagina.style.opacity = '1';
       this.img.style.opacity = '1';
 
       this.scanner.hide();
@@ -67,3 +68,5 @@ this.qrScanner.prepare()
   }
 
 }
+
+
