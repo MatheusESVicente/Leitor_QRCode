@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Dialogs } from '@ionic-native/dialogs/ngx';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 
 
 
@@ -25,6 +27,7 @@ import { Dialogs } from '@ionic-native/dialogs/ngx';
     SplashScreen,
     QRScanner,
     Dialogs,
+    ScreenOrientation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

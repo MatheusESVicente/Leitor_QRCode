@@ -13,6 +13,8 @@ import { Platform } from '@ionic/angular';
 })
 export class Tab1Page {
 
+  public valor_leitura:any = "Resultado: "
+
   public corpoPagina: HTMLElement;
   public img: HTMLElement;
 
@@ -46,6 +48,8 @@ this.qrScanner.prepare()
      this.scanner = this.qrScanner.scan().subscribe((text: string) => {
        console.log('Scanned something', text);
 
+       this.valor_leitura('Resultado: ' + text);
+
        this.dialogs.alert('Resultado: ' + text);
 
        this.corpoPagina.style.opacity = "1";
@@ -68,5 +72,7 @@ this.qrScanner.prepare()
   }
 
 }
+
+
 
 
