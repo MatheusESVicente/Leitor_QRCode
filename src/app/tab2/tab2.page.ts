@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
+
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -8,6 +10,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private screenOrientation: ScreenOrientation) {}
 
+  
 }

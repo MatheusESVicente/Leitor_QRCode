@@ -4,6 +4,7 @@ import { Dialogs } from '@ionic-native/dialogs/ngx';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Platform } from '@ionic/angular';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 @Component({
@@ -13,14 +14,14 @@ import { Platform } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  public valor_leitura:any = "Resultado: "
+  public valor_leitura:any 
 
   public corpoPagina: HTMLElement;
   public img: HTMLElement;
 
   public scanner: any;
 
-  constructor(private qrScanner: QRScanner, private dialogs: Dialogs, private platform: Platform,) {
+  constructor(private qrScanner: QRScanner, private dialogs: Dialogs, private platform: Platform, private screenOrientation: ScreenOrientation) {
     this.platform.backButton.subscribeWithPriority(0, ()=>{
       this.corpoPagina.style.opacity = '1';
       this.img.style.opacity = '1';
@@ -66,6 +67,8 @@ this.qrScanner.prepare()
    } else {
      // permission was denied, but not permanently. You can ask for permission again at a later time.
    }
+
+   
 })
 .catch((e: any) => console.log('Error is', e));
 

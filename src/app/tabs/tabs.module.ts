@@ -7,13 +7,18 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
   ],
   declarations: [TabsPage]
 })
-export class TabsPageModule {}
+
+export class TabsPageModule {
+
+}
