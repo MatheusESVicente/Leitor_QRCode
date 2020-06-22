@@ -7,13 +7,42 @@
 </ion-header>
 
 <ion-content  [fullscreen]="true" color = "medium">
-  <div>
+  
+  <h1>
+    Ultima Leitura
+  </h1>
+  <ion-card color="dark">
     <div>
-      Horário da Leitura: 2:15
+      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
+      <ion-button  expand="block" color="dark" >  
+         <ion-card-content>
+          <a href="https://github.com/MatheusESVicente">https://github.com/MatheusESVicente</a>
+        </ion-card-content>
+      </ion-button>  
     </div>
+  </ion-card>
+  <h1>
+    Demais Leituras
+  </h1>
+  <ion-card color="dark">
     <div>
-      Resultado: https://github.com/MatheusESVicente
+      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
+      <ion-button  expand="block" color="dark" >
+        <ion-card-content>
+          <a href="https://ionicframework.com/">https://ionicframework.com/</a>
+        </ion-card-content>
+      </ion-button>  
     </div>
-  </div>  
-  </ion-content>
+  </ion-card>
+  <ion-card color="dark">
+    <div>
+      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
+      <ion-button expand="block" color="dark" >  
+         <ion-card-content>
+          <a href="http://www.etecbarrabonita.com.br/">http://www.etecbarrabonita.com.br/</a>
+        </ion-card-content>
+      </ion-button>  
+    </div>
+  </ion-card>
 
+  </ion-content>

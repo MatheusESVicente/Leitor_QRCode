@@ -49,7 +49,7 @@ this.qrScanner.prepare()
      this.scanner = this.qrScanner.scan().subscribe((text: string) => {
        console.log('Scanned something', text);
 
-       this.valor_leitura('Resultado: ' + text);
+       this.valor_leitura( text);
 
        this.dialogs.alert('Resultado: ' + text);
 

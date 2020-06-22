@@ -18,7 +18,7 @@
 
 
 <ion-footer classname="ion-no-border">
-  <ion-input expand="block" >Resultado: {{ valor_leitura }}</ion-input>
+  <ion-input Use readonly=“true” expand="block" ><a href="{{valor_leitura}}">{{valor_leitura}}</a></ion-input>
   <ion-toolbar color ="dark">
     <ion-button (click) = "lerQRCode" expand="block" >Ler QRCode</ion-button>
   </ion-toolbar>
