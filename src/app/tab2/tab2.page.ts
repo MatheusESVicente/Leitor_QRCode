@@ -12,7 +12,7 @@ import { link } from 'fs';
 export class Tab2Page {
 
   public Hora:string = "14:15";
-  public Resultado:string = "https://github.com/MatheusESVicente";
+  
 
 
   constructor(private screenOrientation: ScreenOrientation) {}

@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" color = "medium">
-  
+
 </ion-content>
 
 <div class="screnn">
@@ -18,7 +18,14 @@
 
 
 <ion-footer classname="ion-no-border">
-  <ion-input Use readonly=“true” expand="block" ><a href="{{valor_leitura}}">{{valor_leitura}}</a></ion-input>
+  <ion-item  color = "medium">
+    <ion-input expand="block" Use readonly=“true”>
+      <a href="{{valor_leitura}}" target="blank" >{{valor_leitura}}</a>
+    </ion-input>
+  </ion-item>
+  <ion-item color = "medium">
+    <ion-input [(ngModel)]="valor_leitura"  ></ion-input>
+  </ion-item>
   <ion-toolbar color ="dark">
     <ion-button (click) = "lerQRCode" expand="block" >Ler QRCode</ion-button>
   </ion-toolbar>
