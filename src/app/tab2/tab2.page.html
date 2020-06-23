@@ -6,44 +6,39 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  [fullscreen]="true" color = "medium">
+<ion-content  [fullscreen]="true" color="medium">
   
-   <ion-title>
+   <ion-card-title color="light">
     Ultima Leitura
-  </ion-title>
-  <ion-card color="dark">
+   </ion-card-title>
+  <ion-item>
     <div>
-      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
-      <ion-button  expand="block" color="dark" >  
-         <ion-card-content>
-          <a href="https://github.com/MatheusESVicente">https://github.com/MatheusESVicente</a>
-        </ion-card-content>
-      </ion-button>  
-    </div>
-  </ion-card>   
-  <ion-title>
-    Demais Leituras
-  </ion-title>
-  <ion-card color="dark">
-    <div>
-      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
-      <ion-button  expand="block" color="dark" >
+       <ion-card-title>{{Data}} {{Hora}}</ion-card-title>  
         <ion-card-content>
-          <a href="https://ionicframework.com/">https://ionicframework.com/</a>
-        </ion-card-content>
-      </ion-button>  
-    </div>
-  </ion-card>
-  <ion-card color="dark">
+          <ion-card-title class="letras">
+            <a href="https://github.com/MatheusESVicente">https://github.com/MatheusESVicente</a>
+          </ion-card-title>
+        </ion-card-content> 
+      </div>  
+    </ion-item>  
+  <ion-item>
     <div>
-      <ion-card-title>Horário da Leitura: {{Hora}}</ion-card-title>
-      <ion-button expand="block" color="dark" >  
-         <ion-card-content>
-          <a href="http://www.etecbarrabonita.com.br/">http://www.etecbarrabonita.com.br/</a>
-        </ion-card-content>
-      </ion-button>  
-    </div>
-  </ion-card>
-  
-
+       <ion-card-title>{{Data}} {{Hora}}</ion-card-title>  
+        <ion-card-content>
+          <ion-card-title>
+            <a href="https://ionicframework.com/">https://ionicframework.com/</a>
+          </ion-card-title>
+        </ion-card-content> 
+    </div>  
+  </ion-item>
+  <ion-item>
+    <div>
+       <ion-card-title>{{Data}} {{Hora}}</ion-card-title>  
+        <ion-card-content>
+          <ion-card-title>
+            <a href="http://www.etecbarrabonita.com.br/">http://www.etecbarrabonita.com.br/</a> 
+          </ion-card-title>
+        </ion-card-content> 
+    </div>  
+  </ion-item> 
   </ion-content>

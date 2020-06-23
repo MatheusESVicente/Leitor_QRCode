@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { link } from 'fs';
 
 
 
@@ -12,7 +11,7 @@ import { link } from 'fs';
 export class Tab2Page {
 
   public Hora:string = "14:15";
-  
+  public Data:string = "22/06/2020";
 
 
   constructor(private screenOrientation: ScreenOrientation) {}

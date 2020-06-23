@@ -11,7 +11,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  public valor_leitura:any ;
+  public valor_leitura:any;
   public corpoPagina: HTMLElement;
   public img: HTMLElement;
   public scanner: any;
