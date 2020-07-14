@@ -39,7 +39,7 @@ this.qrScanner.prepare()
      this.corpoPagina.style.opacity = "0";
      this.img.style.opacity = "0";
      this.scanner = this.qrScanner.scan().subscribe((text: string) => {
-      this.valor_leitura= text['result'] 
+      this.valor_leitura= (text['result']) ? text['result'] : text;
       this.corpoPagina.style.opacity = "1";
       this.img.style.opacity = "1";
       this.qrScanner.hide(); // hide camera preview

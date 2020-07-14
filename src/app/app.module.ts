@@ -16,9 +16,10 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { HistoricoService } from './services/historico.service';
 
-
-
-
+// firebase imports, remove what you don't require
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -30,7 +31,10 @@ import { HistoricoService } from './services/historico.service';
     AppRoutingModule,
     IonicStorageModule.forRoot({
     name: '__mydb',
-    driverOrder: ['indexeddb', 'sqlite', 'websql']
+    driverOrder: ['indexeddb', 'sqlite', 'websql'],
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule 
     })
   ],
 
