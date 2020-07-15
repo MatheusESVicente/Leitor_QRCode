@@ -11,22 +11,28 @@
   <ion-item-sliding *ngFor="let historico of historicos">
 
     <ion-item lines="full">
+      <div slot="start">
+        <br />
+        <br />
+         <ion-icon color="susses" name="qr-code"></ion-icon>     
+       </div>
       <ion-label>
         <div>
-          <ion-item>
-            <p>
-              {{historico.dataHora}}
-            </p>
-          </ion-item>      
-            <p>
-              <a href=" {{historico.leitura}}"> {{historico.leitura}}</a>
-            </p>        
-        </div>
+          <p class="ion-text-right line">
+            {{historico.dataHora | date: 'short' : '': 'pt'}}
+          </p>
+          <p class="resultado">
+            <a href=" {{historico.leitura}}"> {{historico.leitura}}</a>
+          </p> 
+        </div>  
       </ion-label>
+      <div slot="end">
+        <ion-icon color="primary" name="calendar"></ion-icon>
+      </div>
     </ion-item>
 
     <ion-item-options side="end">
-      <ion-item-option color="danger">
+      <ion-item-option color="danger" {click}="deletar(historico.$key)">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
       </ion-item-option>
     </ion-item-options>
